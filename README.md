@@ -4,7 +4,7 @@ Submitted by: Team FaroundFout (Jinash Rouniyar, Aayush Kumar)
 
 ## Summary
 
-**As international students staying off campus, we find it difficult to find suitable accommodations, and set up essential services and we often have to rely on our acquaintances to help us navigate through this uncertainty. Therefore've created a web application Istudent. is an Android app that aims to address the problems faced by international students living off campus. It will empower the students to navigate independently 
+**As international students staying off campus, we face difficult in finding suitable accommodations and setting up essential services. Therefore, we often have to rely on our acquaintances to help us navigate through this uncertain situation. Therefore've created a web application named Istudent. Istudent aims to provide an all-in-one solution to help students independently navigate and adapt to a new lifestyle. This app would provide personalized recommendations based on individual needs.
 
 
 ## Application Features
@@ -14,7 +14,7 @@ The following REQUIRED features are completed:
 - A login page that compares the records with existing databases in MYSQL
 - A Personalized Recommendation generated with the help of the OpenAI's API
 - An integrated map feature to help navigate around the city
-- A community tab that will help match students based on their records and interest
+- A community tab that will help match students based on their public records and interest
 
 
 ## Video Demo
