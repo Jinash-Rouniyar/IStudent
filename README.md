@@ -4,7 +4,7 @@ Submitted by: Team FaroundFout (Jinash Rouniyar, Aayush Kumar)
 
 ## Summary
 
-**As international students staying off campus, we face difficult in finding suitable accommodations and setting up essential services. Therefore, we often have to rely on our acquaintances to help us navigate through this uncertain situation. Therefore've created a web application named Istudent. Istudent aims to provide an all-in-one solution to help students independently navigate and adapt to a new lifestyle. This app would provide personalized recommendations based on individual needs.
+**As international students staying off campus, we face difficulty in finding suitable housing and setting up essential services. Therefore, we often have to rely on our acquaintances to help us navigate through this uncertain situation. To help address this issue, we have created a web application named Istudent. Istudent aims to provide an all-in-one solution to help students independently navigate and adapt to a new lifestyle. This app would provide personalized recommendations based on individual needs.
 
 
 ## Application Features
