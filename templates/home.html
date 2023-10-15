@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .user-profile {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .user-image {
+            max-width: 150px;
+            border-radius: 50%;
+            border: 2px solid #3498db;
+        }
+
+        .welcome-message {
+            font-size: 24px;
+            color: #3498db;
+        }
+
+        .user-info {
+            font-size: 18px;
+            margin: 20px;
+        }
+
+        .tabs {
+            background-color: #3498db;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .tabs ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .tabs ul li {
+            width: 30%;
+            text-align: center;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+
+        .tabs ul li a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .tabs-content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="user-profile">
+        <h1 class="welcome-message">Welcome, Jinash!</h1>
+        <div class="user-info">
+            <p>User ID: Jinash Rouniyar<!-- {userID} --></p>
+            <p>Email: rouniyarjinash123@gmail.com<!-- {Email} --></p>
+            <p>University: Georgia State University<!-- {University} --></p>
+            <p>Destination Country: United States of America</p>
+        </div>
+
+        <div class="tabs">
+            <ul>
+                <li><a href="javascript:void(0);" onclick="showTab('recommendations')">Recommendations</a></li>
+                <li><a href="javascript:void(0);" onclick="showTab('maps')">Maps</a></li>
+                <li><a href="javascript:void(0);" onclick="showTab('community')">Community</a></li>
+            </ul>
+            <div class="tabs-content">
+                <div id="recommendations" style="display: none;">
+                    <h2><b>Recommendation</b></h2>
+                    <ul>
+                        {% for recommendation in recommendations %}
+                        <li>{{ recommendation }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div id="maps" style="display: none;">
+                    <div id="map" style="width: 100%; height: 400px;"></div>
+                </div>
+                <div id="community" style="display: none;">
+                    <h2>Community</h2>
+                    <p>I will purchase reddit's api service to suggest potential friend groups
+                        that they might be interesed in.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            var tabs = document.querySelectorAll('.tabs-content > div');
+            tabs.forEach(function(tab) {
+                tab.style.display = 'none';
+            });
+            document.getElementById(tabName).style.display = 'block';
+        }
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoiamluYXNoIiwiYSI6ImNsbnFzMzVpZTBuamYyc3BzYzl6eWJhcWEifQ.AIbaXRhbNvnx8mvL_N3s_g';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: [-84.39, 33.75],
+            zoom: 12
+        });
+
+    </script>
+</body>
+</html>

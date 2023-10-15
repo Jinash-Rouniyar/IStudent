@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+    <div class="user-profile">
+        <h1 class="welcome-message">Welcome, Jinash!</h1>
+        <div class="user-info">
+          
+        </div>
+
+        <form method="POST" action="/generate_recommendations">
+            <label for="user_input">Provide your input:</label>
+            <textarea id="user_input" name="user_input" rows="4" cols="50"></textarea>
+            <br>
+            <input type="submit" value="Generate Recommendations">
+        </form>
+
+        <div class="tabs-content">
+            <div id="recommendations">
+                <h2>Recommendations</h2>
+                <ul>
+                    {% for recommendation in recommendations %}
+                        <li>{{ recommendation }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div id="maps">
+                <h2>Maps</h2>
+
+            </div>
+            <div id="community">
+                <h2>Community</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            var tabs = document.querySelectorAll('.tabs-content > div');
+            tabs.forEach(function(tab) {
+                tab.style.display = 'none';
+            });
+            document.getElementById(tabName).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
