@@ -6,7 +6,7 @@ import folium
 import openai
 app = Flask(__name__)
 
-app.secret_key = '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'
+app.secret_key = os.getenv("KEY")
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
